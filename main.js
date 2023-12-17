@@ -3,6 +3,7 @@ const app = express();
 const axios = require("axios");
 
 app.use(express.json());
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
 	res.sendFile(__dirname + "/index.html");
